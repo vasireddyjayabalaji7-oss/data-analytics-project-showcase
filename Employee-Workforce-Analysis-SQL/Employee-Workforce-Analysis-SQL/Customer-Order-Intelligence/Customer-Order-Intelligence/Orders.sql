@@ -1,0 +1,14 @@
+CREATE TABLE Orders (
+OrderID INT PRIMARY KEY,
+CustomerID INT,
+OrderDate DATE,
+Amount DECIMAL(10,2),
+FOREIGN KEY (CustomerID)
+REFERENCES Customers(CustomerID)
+);
+
+INSERT INTO Orders VALUES
+(101,1,'2026-01-10',1500),
+(102,2,'2026-01-15',2500),
+(103,1,'2026-01-20',3000),
+(104,3,'2026-01-25',1000);
